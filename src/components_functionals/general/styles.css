@@ -1,0 +1,15 @@
+.mySwiper {
+  @apply bg-base-300 rounded-md h-[85vh] lg:h-[60vh];
+}
+
+.swiper-slide {
+  @apply flex justify-center items-center;
+}
+
+.swiper-pagination-bullet {
+  @apply bg-primary h-3 w-3;
+}
+
+.swiper-pagination-bullet-active {
+  @apply w-5 rounded-md;
+}

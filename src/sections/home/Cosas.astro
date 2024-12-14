@@ -15,3 +15,104 @@
     <button class="btn btn-primary btn-lg btn-wide">Show Now</button>
   </div>
 </article>
+
+<section
+  id="container-slider"
+  class="flex flex-col bg-base-300 rounded-md h-[85vh] lg:h-[60vh] overflow-hidden"
+>
+  <section id="slider" class="flex-1 flex transition-transform duration-300">
+    <article class="grid lg:grid-cols-2 place-content-center text-center">
+      <div class="">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0631/6815/1720/files/Group1000005037.png?v=1700127846"
+          alt=""
+        />
+      </div>
+      <div
+        class="lg:row-start-1 grid place-content-center place-items-center gap-4"
+      >
+        <p class="font-semibold text-lg">Work light, LED, White</p>
+        <h2 class="text-5xl font-bold text-pretty">
+          Syles Accessories & <br /> New Table Lamp
+        </h2>
+        <button class="btn btn-primary btn-lg btn-wide">Show Now</button>
+      </div>
+    </article>
+
+    <article class="grid lg:grid-cols-2 place-content-center text-center">
+      <div class="">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0631/6815/1720/files/11062497_48473_Converted_5.png?v=1700127953"
+          alt=""
+        />
+      </div>
+      <div
+        class="lg:row-start-1 grid place-content-center place-items-center gap-4"
+      >
+        <p class="font-semibold text-lg">Work light, LED, White</p>
+        <h2 class="text-5xl font-bold text-pretty">
+          Syles Accessories & <br /> New Table Lamp
+        </h2>
+        <button class="btn btn-primary btn-lg btn-wide">Show Now</button>
+      </div>
+    </article>
+
+    <article class="grid lg:grid-cols-2 place-content-center text-center">
+      <div class="">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0631/6815/1720/files/11062497_48473_Converted_3.png?v=1700127894"
+          alt=""
+        />
+      </div>
+      <div
+        class="lg:row-start-1 grid place-content-center place-items-center gap-4"
+      >
+        <p class="font-semibold text-lg">Work light, LED, White</p>
+        <h2 class="text-5xl font-bold text-pretty">
+          Syles Accessories & <br /> New Table Lamp
+        </h2>
+        <button class="btn btn-primary btn-lg btn-wide">Show Now</button>
+      </div>
+    </article>
+  </section>
+
+  <section id="container-buttons-position" class="mx-auto py-6 flex gap-2">
+    <button
+      class="button-change badge badge-sm badge-primary w-6"
+      data-position="0"></button>
+    <button class="button-change badge badge-sm" data-position="1"></button>
+    <button class="button-change badge badge-sm" data-position="2"></button>
+  </section>
+</section>
+
+<script is:inline>
+  const containerSlider = document.getElementById('container-slider')
+  const slider = containerSlider.getElementsByTagName('section')[0]
+  const articles = slider.querySelectorAll('article')
+  const containerButtonsPosition = document.getElementById(
+    'container-buttons-position'
+  )
+  const buttons = containerButtonsPosition.getElementsByTagName('button')
+
+  const sizeSlider = articles.length * 100
+  const weightArticle = (1 / articles.length) * 100
+
+  let position = 0
+  const translate = (1 / articles.length) * 100 * position
+
+  slider.style.width = `${sizeSlider}%`
+  articles.forEach((article) => {
+    article.style.width = `${weightArticle}%`
+  })
+
+  slider.style.transform = `translateX(-${translate}%)`
+
+  Array.from(buttons).forEach((button) =>
+    button.addEventListener('click', (e) => {
+      position = e.target.dataset.position
+
+      const translate = (1 / articles.length) * 100 * position
+      slider.style.transform = `translateX(-${translate}%)`
+    })
+  )
+</script>
