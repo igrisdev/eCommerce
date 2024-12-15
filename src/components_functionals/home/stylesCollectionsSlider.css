@@ -1,8 +1,8 @@
 .mySwiper {
-  @apply bg-base-300 rounded-md h-[85vh] lg:h-[60vh];
+  @apply flex gap-2 max-h-[500px] h-full justify-between w-full bg-red-300;
 }
 
-.swiper-slide {
+/* .swiper-slide {
   @apply flex justify-center items-center;
 }
 
@@ -13,3 +13,5 @@
 .swiper-pagination-bullet-active {
   @apply w-5 rounded-md;
 }
+
+*/

@@ -1,0 +1,15 @@
+.my-swiper-main-products {
+  @apply bg-base-300 rounded-md h-[85vh] lg:h-[60vh];
+}
+
+.swiper-slide-main-products {
+  @apply flex justify-center items-center;
+}
+
+.swiper-pagination-bullet-main-products {
+  @apply rounded-full inline-block bg-primary size-[10px] mx-1 cursor-pointer transition-[width] duration-200;
+}
+
+.swiper-pagination-bullet-active-main-products {
+  @apply w-5 rounded-md pl-2;
+}
