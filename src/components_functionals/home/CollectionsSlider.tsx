@@ -25,7 +25,6 @@ export function CollectionsSlider() {
     >
       <Swiper
         modules={[Pagination, Navigation]}
-        // navigation={true}
         slidesPerView={2}
         spaceBetween={10}
         breakpoints={{
@@ -110,6 +109,7 @@ export function CollectionsSlider() {
             </div>
           </article>
         </SwiperSlide>
+
         <div
           className={`hidden md:block w-full absolute top-[33%] z-10 px-4 text-dark ${
             isHovered
