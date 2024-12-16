@@ -5,10 +5,9 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/navigation'
 
-import './stylesCollectionsSlider.css'
-
 // import required modules
 import { Navigation, Pagination } from 'swiper/modules'
+import { ConfigLegacyKey } from 'node_modules/astro/dist/core/errors/errors-data'
 
 export function CollectionsSlider() {
   const [_, setInit] = useState(false)
@@ -16,6 +15,7 @@ export function CollectionsSlider() {
 
   const prevRef = useRef(null)
   const nextRef = useRef(null)
+  const collections = Array(6).fill('')
 
   return (
     <div
@@ -49,69 +49,27 @@ export function CollectionsSlider() {
         onInit={() => setInit(true)}
         className="my-swiper-collections w-full"
       >
-        <SwiperSlide className="swiper-slide-collections">
-          <article className="">
-            <div className="rounded-lg bg-white overflow-hidden">
-              <img
-                className="w-full h-[306px] object-cover"
-                src="https://cdn.shopify.com/s/files/1/0631/6815/1720/collections/category-1.webp?v=1703562365"
-                alt=""
-              />
-            </div>
-            <div className="text-center">
-              <h3 className="text-2xl font-bold mt-2">Features products</h3>
-              <p className="text-lg font-semibold">items 8</p>
-            </div>
-          </article>
-        </SwiperSlide>
-        <SwiperSlide className="swiper-slide-collections">
-          <article className="">
-            <div className="rounded-lg bg-white overflow-hidden">
-              <img
-                className="w-full h-[306px] object-cover"
-                src="https://cdn.shopify.com/s/files/1/0631/6815/1720/collections/category-1.webp?v=1703562365"
-                alt=""
-              />
-            </div>
-            <div className="text-center">
-              <h3 className="text-2xl font-bold mt-2">Features products</h3>
-              <p className="text-lg font-semibold">items 8</p>
-            </div>
-          </article>
-        </SwiperSlide>
-        <SwiperSlide className="swiper-slide-collections">
-          <article className="">
-            <div className="rounded-lg bg-white overflow-hidden">
-              <img
-                className="w-full h-[306px] object-cover"
-                src="https://cdn.shopify.com/s/files/1/0631/6815/1720/collections/category-1.webp?v=1703562365"
-                alt=""
-              />
-            </div>
-            <div className="text-center">
-              <h3 className="text-2xl font-bold mt-2">Features products</h3>
-              <p className="text-lg font-semibold">items 8</p>
-            </div>
-          </article>
-        </SwiperSlide>
-        <SwiperSlide className="swiper-slide-collections">
-          <article className="">
-            <div className="rounded-lg bg-white overflow-hidden">
-              <img
-                className="w-full h-[306px] object-cover"
-                src="https://cdn.shopify.com/s/files/1/0631/6815/1720/collections/category-1.webp?v=1703562365"
-                alt=""
-              />
-            </div>
-            <div className="text-center">
-              <h3 className="text-2xl font-bold mt-2">Features products</h3>
-              <p className="text-lg font-semibold">items 8</p>
-            </div>
-          </article>
-        </SwiperSlide>
-
+        {collections.map(() => (
+          <SwiperSlide className="swiper-slide-collections">
+            <a href="/products">
+              <article className="">
+                <div className="rounded-lg bg-white overflow-hidden">
+                  <img
+                    className="w-full h-[306px] object-cover"
+                    src="https://cdn.shopify.com/s/files/1/0631/6815/1720/collections/category-1.webp?v=1703562365"
+                    alt=""
+                  />
+                </div>
+                <div className="text-center">
+                  <h3 className="text-2xl font-bold mt-2">Features products</h3>
+                  <p className="text-lg font-semibold">items 8</p>
+                </div>
+              </article>
+            </a>
+          </SwiperSlide>
+        ))}
         <div
-          className={`hidden md:block w-full absolute top-[33%] z-10 px-4 text-dark ${
+          className={`hidden md:block w-full absolute top-[33%] z-10 px-4 text-black ${
             isHovered
               ? 'opacity-100 transition-opacity duration-300 ease-in-out'
               : 'opacity-0 transition-opacity duration-300 ease-in-out'

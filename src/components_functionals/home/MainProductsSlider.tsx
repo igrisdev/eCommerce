@@ -34,9 +34,9 @@ export function MainProductsSlider() {
             <h2 className="text-5xl font-bold text-pretty">
               Syles Accessories & <br /> New Table Lamp
             </h2>
-            <button className="btn btn-primary btn-lg btn-wide">
+            <a href="/products" className="btn btn-primary btn-lg btn-wide">
               Show Now
-            </button>
+            </a>
           </div>
         </article>
       </SwiperSlide>
@@ -53,9 +53,9 @@ export function MainProductsSlider() {
             <h2 className="text-5xl font-bold text-pretty">
               Syles Accessories & <br /> New Table Lamp
             </h2>
-            <button className="btn btn-primary btn-lg btn-wide">
+            <a href="/products" className="btn btn-primary btn-lg btn-wide">
               Show Now
-            </button>
+            </a>
           </div>
         </article>
       </SwiperSlide>
@@ -72,9 +72,9 @@ export function MainProductsSlider() {
             <h2 className="text-5xl font-bold text-pretty">
               Syles Accessories & <br /> New Table Lamp
             </h2>
-            <button className="btn btn-primary btn-lg btn-wide">
+            <a href="/products" className="btn btn-primary btn-lg btn-wide">
               Show Now
-            </button>
+            </a>
           </div>
         </article>
       </SwiperSlide>
