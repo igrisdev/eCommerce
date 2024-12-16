@@ -25,12 +25,11 @@ export function CollectionsSlider() {
     >
       <Swiper
         modules={[Pagination, Navigation]}
-        slidesPerView={2}
+        slidesPerView={1}
         spaceBetween={10}
         breakpoints={{
           640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
+            slidesPerView: 1,
           },
           768: {
             slidesPerView: 3,
@@ -49,8 +48,8 @@ export function CollectionsSlider() {
         onInit={() => setInit(true)}
         className="my-swiper-collections w-full"
       >
-        {collections.map(() => (
-          <SwiperSlide className="swiper-slide-collections">
+        {collections.map((_, index) => (
+          <SwiperSlide key={index} className="swiper-slide-collections">
             <a href="/products">
               <article className="">
                 <div className="rounded-lg bg-white overflow-hidden">
@@ -80,15 +79,14 @@ export function CollectionsSlider() {
             className="p-2 lg:p-3 rounded-md bg-body cursor-pointer shadow-sm absolute left-4"
           >
             <svg
-              xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               className="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -102,15 +100,14 @@ export function CollectionsSlider() {
             className="p-2 lg:p-3 rounded-md bg-body cursor-pointer shadow-sm absolute right-4"
           >
             <svg
-              xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               className="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
