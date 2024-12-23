@@ -36,7 +36,7 @@ export function MainProductsSlider() {
                 Work light, LED, White
               </p>
               <h2 className='text-3xl md:text-5xl font-bold text-pretty'>
-                Syles Accessories & <br /> New Table Lamp
+                Styles Accessories & <br /> New Table Lamp
               </h2>
               <a
                 href='/products'

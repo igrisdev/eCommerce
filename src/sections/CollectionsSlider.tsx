@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination } from 'swiper/modules'
 
 export const CollectionsSlider = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [_, setInit] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
 
