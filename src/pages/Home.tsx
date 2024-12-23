@@ -1,5 +1,13 @@
 import { Layout } from '../layouts/Layout'
+import { MainProductsSlider } from '../sections/MainProductsSlider'
 
 export default function Home() {
-  return <Layout>hola</Layout>
+  return (
+    <Layout>
+      <MainProductsSlider />
+      {/* <Collections /> */}
+      {/* <FeaturedProducts /> */}
+      {/* <OfferProduct /> */}
+    </Layout>
+  )
 }
