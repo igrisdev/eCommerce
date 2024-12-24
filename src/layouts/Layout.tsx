@@ -17,11 +17,11 @@ export const Layout = ({ children }: iLayout) => {
 
       {showAside && <Aside />}
 
-      <Container element='main' className='pt-[120px] lg:pt-[71px]'>
+      {/* <Container element='main' className='pt-[120px] lg:pt-[71px]'>
         {children}
-      </Container>
+      </Container> */}
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }

@@ -9,13 +9,11 @@ export const Aside = () => {
     const target = e.target as HTMLElement
 
     if (
-      target.className.includes('showAsideContainer') ||
+      target.id === 'showAsideContainer' ||
       target.nodeName === 'LI' ||
-      target.nodeName === 'UL'
-    ) {
+      target.nodeName == 'UL'
+    )
       return
-    }
-    console.log(target)
 
     setShowAside({ showAside: !showAside })
   }
@@ -25,7 +23,10 @@ export const Aside = () => {
       className='fixed top-0 bg-base-300/80 w-full h-screen z-[60]'
       onClick={e => handleClick(e)}
     >
-      <div className='showAsideContainer flex flex-col gap-14 w-full md:w-[380px] h-full bg-base-100 p-4'>
+      <div
+        id='showAsideContainer'
+        className='flex flex-col gap-14 w-full md:w-[380px] h-full bg-base-100 p-4'
+      >
         <div className='flex justify-between items-center'>
           <a href='/' className='text-3xl font-bold'>
             eCommerce

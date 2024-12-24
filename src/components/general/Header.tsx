@@ -40,7 +40,7 @@ export const Header = () => {
 
           <input
             type='text'
-            value=''
+            defaultValue={''}
             className='w-full py-2 px-5 truncate rounded-full border-base-content border-[1px] bg-base-200 outline-none'
           />
           <button className='absolute right-1 top-1/2 -translate-y-1/2 bg-white rounded-full p-1 text-black'>
@@ -121,7 +121,7 @@ export const Header = () => {
       <div className='relative block lg:hidden'>
         <input
           type='text'
-          value=''
+          defaultValue={''}
           className='w-full py-2 px-5 truncate rounded-full border-base-content border-[1px] bg-base-300 outline-none'
         />
 
