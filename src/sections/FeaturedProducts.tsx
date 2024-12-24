@@ -1,3 +1,4 @@
+import { Plus } from 'lucide-react'
 import './stylesFeaturedProducts.css'
 
 export const FeaturedProducts = () => {
@@ -11,8 +12,8 @@ export const FeaturedProducts = () => {
       </div>
 
       <div className='container-featured-products'>
-        {featuredProducts.map(() => (
-          <article className='relative group flex flex-col w-max'>
+        {featuredProducts.map((_, index) => (
+          <article key={index} className='relative group flex flex-col w-max'>
             <a href='/products' className='absolute w-full h-full z-20' />
             <div className='relative aspect-[1.1/1] max-h-[300px] rounded-lg bg-white overflow-hidden'>
               <img
@@ -35,22 +36,7 @@ export const FeaturedProducts = () => {
 
       <div className='grid place-content-center mt-10'>
         <a href='/' className='btn btn-lg btn-wide btn-primary'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            width='24'
-            height='24'
-            viewBox='0 0 24 24'
-            fill='none'
-            stroke='currentColor'
-            stroke-width='2'
-            stroke-linecap='round'
-            stroke-linejoin='round'
-            className='icon icon-tabler icons-tabler-outline icon-tabler-plus'
-          >
-            <path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
-            <path d='M12 5l0 14'></path>
-            <path d='M5 12l14 0'></path>
-          </svg>
+          <Plus size={24} />
           See All Products
         </a>
       </div>
