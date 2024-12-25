@@ -51,7 +51,7 @@ export const Header = () => {
         <div className='flex-none'>
           <button className='btn btn-ghost btn-circle'>
             {/* <!-- sun icon --> */}
-            {/* <Sun size={22} /> */}
+            <Sun size={22} className='hidden' />
 
             {/* <!-- moon icon --> */}
             <Moon size={22} />
