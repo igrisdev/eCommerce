@@ -1,10 +1,10 @@
 import { Layout } from '../layouts/Layout'
-import { CollectionsSlider } from '../sections/CollectionsSlider'
-import { FeaturedProducts } from '../sections/FeaturedProducts'
-import { MainProductsSlider } from '../sections/MainProductsSlider'
-import { OfferProduct } from '../sections/OfferProduct'
+import { CollectionsSlider } from '../sections/home/CollectionsSlider'
+import { FeaturedProducts } from '../sections/home/FeaturedProducts'
+import { MainProductsSlider } from '../sections/home/MainProductsSlider'
+import { OfferProduct } from '../sections/home/OfferProduct'
 
-export default function Home() {
+export const Home = () => {
   return (
     <Layout>
       <MainProductsSlider />
