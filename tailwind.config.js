@@ -13,4 +13,16 @@ export default {
     },
   },
   plugins: [daisyui],
+  daisyui: {
+    themes: [
+      {
+        dark: {
+          'base-100': '#1e1e1e',
+          'base-200': '#2a2a2a',
+          'base-300': '#3a3a3a',
+          primary: '#fff',
+        },
+      },
+    ],
+  },
 }
