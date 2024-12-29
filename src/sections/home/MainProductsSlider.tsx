@@ -8,6 +8,7 @@ import './stylesMainProductsSlider.css'
 
 // import required modules
 import { Pagination } from 'swiper/modules'
+import { Link } from 'react-router'
 
 export function MainProductsSlider() {
   const value =
@@ -38,12 +39,12 @@ export function MainProductsSlider() {
               <h2 className='text-3xl md:text-5xl font-bold text-pretty'>
                 Styles Accessories & <br /> New Table Lamp
               </h2>
-              <a
-                href='/products'
+              <Link
+                to='/products'
                 className='btn btn-primary btn-md md:btn-lg md:btn-wide '
               >
                 Show Now
-              </a>
+              </Link>
             </div>
           </article>
         </SwiperSlide>
