@@ -41,7 +41,7 @@ export function MainProductsSlider() {
               </h2>
               <Link
                 to='/products'
-                className='btn btn-primary btn-md md:btn-lg md:btn-wide '
+                className='btn btn-primary btn-md md:btn-lg md:btn-wide mt-4'
               >
                 Show Now
               </Link>

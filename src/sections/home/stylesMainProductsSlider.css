@@ -1,5 +1,5 @@
 .my-swiper-main-products {
-  @apply bg-base-300 rounded-md h-[85vh] lg:h-[60vh];
+  @apply bg-base-300 rounded-md h-[85vh] lg:h-[70vh];
 }
 
 .swiper-slide-main-products {
