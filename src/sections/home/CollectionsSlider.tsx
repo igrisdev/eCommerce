@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 // import required modules
 import { Navigation, Pagination } from 'swiper/modules'
+import { Link } from 'react-router'
 
 export const CollectionsSlider = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -54,7 +55,7 @@ export const CollectionsSlider = () => {
         >
           {collections.map((_, index) => (
             <SwiperSlide key={index} className='swiper-slide-collections'>
-              <a href='/products'>
+              <Link to='/products'>
                 <article className=''>
                   <div className='rounded-lg bg-white overflow-hidden'>
                     <img
@@ -70,7 +71,7 @@ export const CollectionsSlider = () => {
                     <p className='text-lg font-semibold'>items 8</p>
                   </div>
                 </article>
-              </a>
+              </Link>
             </SwiperSlide>
           ))}
           <div

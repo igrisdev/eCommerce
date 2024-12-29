@@ -1,7 +1,10 @@
+import { Link } from 'react-router'
+
 export const CardProductAddToCart = () => {
   return (
     <article className='relative group flex flex-col w-max'>
-      <a href='/products' className='absolute w-full h-full z-20' />
+      <Link to='/products' className='absolute w-full h-full z-20' />
+
       <div className='relative aspect-[1.1/1] max-h-[250px] rounded-lg bg-white overflow-hidden'>
         <img
           className='w-full h-full object-cover'

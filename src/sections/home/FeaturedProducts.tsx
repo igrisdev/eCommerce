@@ -1,6 +1,7 @@
 import { Plus } from 'lucide-react'
 import './stylesFeaturedProducts.css'
 import { CardProductAddToCart } from '../../components/general/CardProductAddToCart'
+import { Link } from 'react-router'
 
 export const FeaturedProducts = () => {
   const featuredProducts = Array(31).fill('').slice(0, 8)
@@ -19,10 +20,10 @@ export const FeaturedProducts = () => {
       </div>
 
       <div className='grid place-content-center mt-10'>
-        <a href='/' className='btn btn-lg btn-wide btn-primary'>
+        <Link to='/' className='btn btn-lg btn-wide btn-primary'>
           <Plus size={24} />
           See All Products
-        </a>
+        </Link>
       </div>
     </section>
   )

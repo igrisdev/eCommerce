@@ -1,3 +1,5 @@
+import { Link } from 'react-router'
+
 export const OfferProduct = () => {
   return (
     <section className='mt-20 bg-base-300 rounded-md h-[85vh] lg:h-[60vh] flex items-center'>
@@ -13,12 +15,12 @@ export const OfferProduct = () => {
           <h2 className='text-3xl md:text-5xl font-bold text-pretty'>
             Styles Accessories & <br /> New Table Lamp
           </h2>
-          <a
-            href='/products'
+          <Link
+            to='/products'
             className='btn btn-primary btn-md md:btn-lg md:btn-wide'
           >
             Show Now
-          </a>
+          </Link>
         </div>
       </article>
     </section>
